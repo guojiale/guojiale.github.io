@@ -1,0 +1,30 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "personal information and work exprience",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guojiale/guojiale.github.io.git"
+  },
+  "keywords": [
+    "guojiale"
+  ],
+  "author": "guojiale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guojiale/guojiale.github.io/issues"
+  },
+  "homepage": "https://github.com/guojiale/guojiale.github.io#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^2.1.4",
+    "jquery-countto": "^1.2.0"
+  }
+}

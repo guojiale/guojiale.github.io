@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="gjl-app">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>看透小过程-收获小成功</title>
+    <link rel="shortcut icon" href="images/logo-1.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>hello word</h1>
+<div class="app app-header-fixed">
+    <!--头部-->
+    <header id="header" class="app-header navbar g-nav-box"role="navigation" >
+        <div class="navbar-header bg-dark">
+            <a href="#" class="navbar-brand">
+                <img src="images/logo-1.png" alt="." >
+                <span>jialeGuo website</span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#" data-nav-section="home">个人信息<span></span></a></li>
+                <li><a href="#" data-nav-section="services">H5+CSS3<span></span></a></li>
+                <li><a href="#" data-nav-section="explore">手机站<span></span></a></li>
+                <li><a href="#" data-nav-section="testimony">canvas<span></span></a></li>
+                <li><a href="#" data-nav-section="pricing">立体<span></span></a></li>
+                <li><a href="#" data-nav-section="team">PS<span></span></a></li>
+                <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
+                <li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" class="time-box" id="time-box">
+                        <div class="time clearfix" id="time">
+                            <span class="date1 time-n">2015</span>
+                            <span class="date2">年</span>
+                            <span class="date1 time-n">12</span>
+                            <span class="date2">月</span>
+                            <span class="date1 time-n">12</span>
+                            <span class="date2">日</span>
+                            <span class="tda"></span>
+                            <span class="date3 time-n">12</span>
+                            <span>:</span>
+                            <span class="date3 time-n">12</span>
+                            <span>:</span>
+                            <span class="date3 time-n">12</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="tou-box" class="tou-box">
+                        <img src="images/header.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <!--侧边-->
+    <aside id="aside" class="app-aside hidden-xs bg-dark">
+        <ul>
+            <li style="height: 60px">1</li>
+            <li style="height: 60px">2</li>
+            <li style="height: 60px">3</li>
+            <li style="height: 60px">4</li>
+            <li style="height: 60px">5</li>
+            <li style="height: 60px">6</li>
+            <li style="height: 60px">7</li>
+            <li style="height: 60px">1</li>
+            <li style="height: 60px">2</li>
+            <li style="height: 60px">3</li>
+            <li style="height: 60px">4</li>
+            <li style="height: 60px">5</li>
+            <li style="height: 60px">6</li>
+            <li style="height: 60px">7</li>
+        </ul>
+    </aside>
+    <!--内容-->
+    <div id="content" class="app-content" role="main">
+
+    </div>
+    <!--底部-->
+    <div id="footer" class="app-footer" role="footer">
+
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
