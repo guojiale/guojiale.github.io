@@ -5,6 +5,8 @@ var app=angular.module('gjl-app',[]);
 function Main() {
     
 }
+
+
 //时间函数
 Main.prototype.timer=function (oTime) {
     var _this=this;

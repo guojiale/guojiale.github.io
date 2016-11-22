@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.js"></script>
+    <style>
+        .g-swiper{
+            position: relative;
+            width: 600px;
+            height:400px;
+            border: 2px solid #0a0a0a;
+            margin: 0 auto;
+        }
+        .g-swiper>button{
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+            background-color: #00a8f3;
+        }
+        .g-swiper-left{
+            position: absolute;
+            left: 10px;
+            top:200px;
+        }
+        .g-swiper-right{
+            position: absolute;
+            right: 10px;
+            top:200px;
+        }
+        .bammer-box img{
+            width: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div class="g-swiper-box" ng-controller="gSwiperCtrl as vm">
+    <div style="width: 300px; height: 200px; border: 2px solid #00a8f3;">
+        <input style="width: 300px; height: 200px" ng-model="vm.arr"/>
+    </div>
+    <div g-swiper class="g-swiper">
+
+    </div>
+</div>
+
+<script>
+    var app=angular.module('app',[]);
+    app.controller('gSwiperCtrl',function ($scope,$http) {
+        var vm=this;
+        vm.arr=['http://www.txship.com/img/banner8.jpg','http://www.txship.com/img/banner9.jpg','http://www.txship.com/img/banner2.jpg'];
+
+    });
+    app.directive('gSwiper',function () {
+        return {
+            restrict:"A",
+            templateUrl:'template/g-swiper-template.html',
+        }
+    });
+</script>
+</body>
+</html>

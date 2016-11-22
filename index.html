@@ -28,7 +28,6 @@
                 <li><a href="#" data-nav-section="pricing">立体<span></span></a></li>
                 <li><a href="#" data-nav-section="team">PS<span></span></a></li>
                 <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
-                <li><a href="#" data-nav-section="faq"><span>FAQ</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -59,33 +58,19 @@
 
     </header>
     <!--侧边-->
-    <aside id="aside" class="app-aside hidden-xs bg-dark">
-        <ul>
-            <li style="height: 60px">1</li>
-            <li style="height: 60px">2</li>
-            <li style="height: 60px">3</li>
-            <li style="height: 60px">4</li>
-            <li style="height: 60px">5</li>
-            <li style="height: 60px">6</li>
-            <li style="height: 60px">7</li>
-            <li style="height: 60px">1</li>
-            <li style="height: 60px">2</li>
-            <li style="height: 60px">3</li>
-            <li style="height: 60px">4</li>
-            <li style="height: 60px">5</li>
-            <li style="height: 60px">6</li>
-            <li style="height: 60px">7</li>
-        </ul>
+    <aside id="aside" class="app-aside hidden-xs bg-dark" ng-include="'template/g-personal-information.html'">
+
     </aside>
     <!--内容-->
     <div id="content" class="app-content" role="main">
-
+            <p>不要问我从哪里来的，我的家乡在远方</p>
     </div>
     <!--底部-->
     <div id="footer" class="app-footer" role="footer">
 
     </div>
 </div>
+
 <script src="js/jquery.js"></script>
 <script src="js/angular.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
