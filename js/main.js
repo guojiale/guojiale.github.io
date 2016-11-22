@@ -2,8 +2,8 @@
  * Created by gjl on 2016/11/21.
  */
 var app=angular.module('gjl-app',[]);
-function Main() {
-    
+function Main(json) {
+    this.timer(json.timer);
 }
 
 
@@ -35,7 +35,10 @@ Main.prototype.timer=function (oTime) {
 };
 Main.prototype.toDou=function (n) {
     return n<10?'0'+n:''+n;
+};
+var jsonData={
+    timer:'time'
 }
-var init=new Main();
-init.timer('time')
+var init=new Main(jsonData);
+
 
