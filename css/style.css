@@ -167,3 +167,57 @@ html,body{
   padding: 0;
   margin: 0;
 }
+.g-personal-list .g-personal-li{
+  padding: 8px 0;
+  height: 36px;
+}
+.g-personal-list .g-personal-li:hover{
+  background-color: #32374a;
+  transition: 0.3s all linear;
+}
+.g-personal-list .g-personal-li:last-child:hover{
+  background-color: #3a3f51;
+}
+.g-span-color{
+  color: #23b7e5;
+}
+.g-person-aslide .g-span-pho{
+  color: #00a8f3;
+  font-size: 20px;
+}
+.g-person-aslide .g-span-school{
+  color:#7a43b6;
+}
+.g-person-aslide .g-span-hobby{
+  color:#b6438d;;
+}
+.g-person-aslide .g-span-home{
+  color:#5a43b6;
+  font-size: 17px;
+}
+.g-person-aslide .g-personal-list .g-span-email{
+  color: #7266ba;
+  line-height: 18px;
+}
+.g-personal-list .g-personal-li>span:nth-child(1){
+  padding-left: 10px;
+  padding-right: 5px;
+  width: 30px;
+  text-align: center;
+}
+.g-personal-list .g-personal-li>span{
+  float: left;
+  height: 20px;
+  line-height: 20px;
+}
+.g-personal-list .g-personal-last{
+  padding-left: 10px;
+  padding-right: 8px;
+}
+.bg-dark.dk, .bg-dark .dk {
+  background-color: #2e3344;
+  height: 3px;
+}
+.progress-bar-info {
+  background-color: #23b7e5;
+}
