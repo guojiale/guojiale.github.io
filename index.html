@@ -12,43 +12,30 @@
 <body>
 <div class="app app-header-fixed">
     <!--头部-->
-    <header id="header" class="app-header navbar g-nav-box"role="navigation" >
+    <header id="header" ng-controller="headerCtrl as vm" class="app-header navbar g-nav-box" role="navigation" >
         <div class="navbar-header bg-dark">
             <a href="#" class="navbar-brand">
                 <img src="images/logo-1.png" alt="." >
                 <span>jialeGuo website</span>
             </a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="#" data-nav-section="home">个人信息<span></span></a></li>
-                <li><a href="#" data-nav-section="services">H5+CSS3<span></span></a></li>
-                <li><a href="#" data-nav-section="explore">手机站<span></span></a></li>
-                <li><a href="#" data-nav-section="testimony">canvas<span></span></a></li>
-                <li><a href="#" data-nav-section="pricing">立体<span></span></a></li>
-                <li><a href="#" data-nav-section="team">PS<span></span></a></li>
-                <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
+        <div id="navbar" class="g-navbar navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left g-nav">
+                <li class="active"><a href="#" data-nav-section="home">个人信息<span>个人信息</span></a></li>
+                <li><a href="#" data-nav-section="services">H5+CSS3<span>H5+CSS3</span></a></li>
+                <li><a href="#" data-nav-section="explore">手机站<span>手机站</span></a></li>
+                <li><a href="#" data-nav-section="testimony">canvas<span>canvas</span></a></li>
+                <li><a href="#" data-nav-section="pricing">立体<span>立体</span></a></li>
+                <li><a href="#" data-nav-section="team">PS<span>PS</span></a></li>
+                <li><a href="#" data-nav-section="blog">Blog<span>Blog</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" class="time-box" id="time-box">
-                        <div class="time clearfix" id="time">
-                            <span class="date1 time-n">2015</span>
-                            <span class="date2">年</span>
-                            <span class="date1 time-n">12</span>
-                            <span class="date2">月</span>
-                            <span class="date1 time-n">12</span>
-                            <span class="date2">日</span>
-                            <span class="tda"></span>
-                            <span class="date3 time-n">12</span>
-                            <span>:</span>
-                            <span class="date3 time-n">12</span>
-                            <span>:</span>
-                            <span class="date3 time-n">12</span>
-                        </div>
+                    <a href="javascript:;"  class="time-box" id="time-box" ng-cloak>
+                        {{vm.timer | date:'yyyy年MM月dd日 HH:mm:ss'}}
                     </a>
                 </li>
-                <li>
+                <li class="g-header-right-img">
                     <a href="#" id="tou-box" class="tou-box">
                         <img src="images/header.png">
                     </a>
@@ -63,7 +50,12 @@
     </aside>
     <!--内容-->
     <div id="content" class="app-content" role="main">
-            <p>不要问我从哪里来的，我的家乡在远方</p>
+          <div class="g-content-box" style="width: 100%; height: 100%;">
+              <div my-video style="background: #000;">
+
+              </div>
+          </div>
+
     </div>
     <!--底部-->
     <div id="footer" class="app-footer" role="footer">
@@ -75,5 +67,6 @@
 <script src="js/angular.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/config.js"></script>
 </body>
 </html>
