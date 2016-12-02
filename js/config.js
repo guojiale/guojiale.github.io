@@ -1,19 +1,38 @@
 /**
  * Created by gjl on 2016/11/26.
  */
-/*app.provider('doubleNumber',function () {
-    this.time=0;
-    this.$get=function () {
-        return {
-
-        }
-    }
+/*/--------------------------angular run------------------------------/*/
+/*app.run(function ($rootScope,$state) {
+    $rootScope.$on('$stateChangeSuccess',function (event,toState,toParams,fromState,fromParams) {
+        
+    });
 });*/
+/*/--------------------------router------------------------------/*/
+app.config(function ($stateProvider,$urlRouterProvider) {
+    $stateProvider.state('personal',{
+        url:'/personal',
+        templateUrl:'template/personal.html'
+    }).state('h5c3',{
+        url:'/h5c3',
+        templateUrl:'template/h5c3.html'
+    });
+    $urlRouterProvider.otherwise('personal');
+});
+/*/--------------------------service------------------------------/*/
+/*app.provider('doubleNumber',function () {
+ this.time=0;
+ this.$get=function () {
+ return {
+
+ }
+ }
+ });*/
 app.constant('baseService',{
     "doubleNumber":function (num) {
         return num<10 ?'0'+num : num;
     }
 });
+/*/--------------------------directive------------------------------/*/
 app.directive('myVideo',function (baseService) {
     return{
         restrict:'A',

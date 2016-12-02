@@ -1,9 +1,12 @@
 /**
  * Created by gjl on 2016/11/21.
  */
-var app=angular.module('gjl-app',[]);
-app.controller('headerCtrl',['$scope','$interval',function ($scope,$interval) {
+var app=angular.module('gjl-app',['ui.router']);
+app.controller('headerCtrl',['$scope','$interval','$state',function ($scope,$interval,$state) {
     var vm=this;
+    vm.stateGo=function (url) {
+        $state.go(url);
+    };
     vm.timer=new Date();
     $interval(function () {
         vm.timer=new Date();

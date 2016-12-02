@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "description": "personal information and work exprience",
+  "main": "index.js",
+  "authors": [
+    "guojiale"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "guojiale"
+  ],
+  "homepage": "https://github.com/guojiale/guojiale.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./lib/js",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "^1.5.9"
+  }
+}
