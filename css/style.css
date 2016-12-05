@@ -950,3 +950,20 @@ div::-moz-selection {
   cursor: pointer;
 }
 .g-animate1:hover {background: rgb(0, 75, 0);}
+/*icon-style*/
+.g-icon-title{
+  height: 80px;
+  font-size: 16px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fafafa;
+  font-family: "Microsoft YaHei";
+}
+.g-icon-box{
+  width: 800px;
+  margin: 0 auto;
+}
+.g-icon-box>img{
+  width: 100%;
+}

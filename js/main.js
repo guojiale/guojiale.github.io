@@ -11,16 +11,22 @@ app.controller('headerCtrl',['$scope','$interval','$state',function ($scope,$int
         $state.go(url);
         switch(url){
             case 'personal':
-                vm.indexid=0
+                vm.indexid=0;
                 break;
             case 'h5c3':
-                vm.indexid=1
+                vm.indexid=1;
                 break;
             case 'h5c3.cube':
-                vm.indexid=1
+                vm.indexid=1;
                 break;
             case 'phone':
-                vm.indexid=2
+                vm.indexid=2;
+                break;
+            case 'ps':
+                vm.indexid=3;
+                break;
+            case 'blog':
+                vm.indexid=4;
                 break;
         }
     };

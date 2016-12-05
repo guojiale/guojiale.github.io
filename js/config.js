@@ -46,7 +46,13 @@ app.config(function ($stateProvider,$urlRouterProvider) {
         templateUrl:'template/h5c3/fanzhuan.html',
     }).state('phone',{
         url:'/phone',
-        templateUrl:'template/h5c3.html'
+        templateUrl:'template/phone.html'
+    }).state('ps',{
+        url:'/ps',
+        templateUrl:'template/icon.html'
+    }).state('blog',{
+        url:'/blog',
+        templateUrl:'template/blog.html'
     });
     $urlRouterProvider.otherwise('personal');
 });
