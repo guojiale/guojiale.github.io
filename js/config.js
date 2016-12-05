@@ -38,9 +38,12 @@ app.config(function ($stateProvider,$urlRouterProvider) {
     }).state('h5c3.cube1',{
         url:'/cube1',
         templateUrl:'template/h5c3/cube-mouseenter.html',
-    }).state('h5c3.video',{
-        url:'/cube1',
-        templateUrl:'template/h5c3/cube-mouseenter.html',
+    }).state('h5c3.cube2',{
+        url:'/cube2',
+        templateUrl:'template/h5c3/g-circle.html',
+    }).state('h5c3.cube3',{
+        url:'/cube2',
+        templateUrl:'template/h5c3/fanzhuan.html',
     }).state('phone',{
         url:'/phone',
         templateUrl:'template/h5c3.html'
