@@ -21,10 +21,9 @@
         </div>
         <div id="navbar" class="g-navbar navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left g-nav">
-                <li ng-click="vm.stateGo('personal')" class="active"><a ng-href="javascript:;" >个人信息<span >个人信息</span></a></li>
-                <li ng-click="vm.stateGo('h5c3')"><a ui-sref="h5c3">H5+CSS3<span  >H5+CSS3</span></a></li>
-                <li><a ui-sref="phone">手机站<span>手机站</span></a></li>
-                <li><a ui-sref="3d" >立体<span>立体</span></a></li>
+                <li ng-click="vm.stateGo('personal')"  ng-class="{'active':vm.indexid == 0}"><a ng-href="javascript:;" >个人信息<span >个人信息</span></a></li>
+                <li ng-click="vm.stateGo('h5c3.cube')"  ng-class="{'active':vm.indexid == 1}"><a ui-sref="h5c3.cube">H5+CSS3<span  >H5+CSS3</span></a></li>
+                <li ng-click="vm.stateGo('phone')" ng-class="{'active':vm.indexid == 2}"><a ui-sref="phone">手机站<span>手机站</span></a></li>
                 <li><a ui-sref="ps">PS<span>PS</span></a></li>
                 <li><a ui-sref="blog">Blog<span>Blog</span></a></li>
             </ul>
@@ -48,12 +47,12 @@
 
     </aside>
     <!--内容-->
-    <div id="content" class="app-content" role="main">
+    <div id="content" class="app-content" >
           <div class="g-content-box" style="width: 100%; height: 100%;">
               <!--<div my-video style="background: #000;">
 
               </div>-->
-              <div ui-view></div>
+              <div ui-view class="g-top-view"></div>
           </div>
 
     </div>
@@ -67,6 +66,7 @@
 <script src="js/angular.js"></script>
 <script src="js/angular-ui-router.min.js"></script>
 <script src="js/angular-resource.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/config.js"></script>
