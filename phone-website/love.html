@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>爱情</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="css/love.css">
+		<link rel="stylesheet" href="css/flex.css">
+		<script src="js/zepto.min.js"></script>
+		<script src="js/swiper-3.3.1.jquery.min.js"></script>
+		<script>
+			  (function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			 })(document, window);
+		</script>
+	</head>
+	<body>
+	<div class="audio-box rotate">
+		<audio loop=""  src="audio/audio1.mp3" id="audio" autoplay="" preload=""></audio>
+	</div>
+	<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide" >
+				<div class="contain slide-first">
+				</div>
+				<div class="g-circle">
+					<img class="bk_round" src="images/a_round.png" alt="">
+					<img class="a_round" src="images/a_round.png" alt="">
+					<img class="b_round" src="images/b_round.png" alt="">
+					<img class="tou_img" src="images/header.png" alt="">
+					<div class="slide-1-title">
+						郭嘉乐<br/>
+						个人简历
+					</div>
+				</div>
+				<div class="slide-1-bottom">
+						<span class="text">
+							<span class="s-t-top"></span>
+							求职前端开发岗位
+							<span class="s-t-bottom"></span>
+						</span>
+						<div class="jin-huan-box">
+							<img src="images/jinhuan.png" alt="">
+						</div>
+				</div>
+
+				<div class="s-1-bot-bk">
+				</div>
+		    </div>
+		    <div class="swiper-slide" style="background: #FE54ff;">
+				<div class="s-2-back">
+				</div>
+				<div class="s-2-inf" flex="dir:top">
+					<div flex-box="0" class="s-2-title">
+						<div class="s-2-title-text">
+							个人信息
+							<span></span>
+							<i class="s-2-left"></i>
+							<i class="s-2-right"></i>
+						</div>
+					</div>
+					<div flex-box="1" flex="dir:top box:justify">
+						<div  class="s-2-basic-title">
+							<div class="text">Basic Information</div>
+						</div>
+						<div flex="dir:top">
+							<div  class="s-2-inf-box" flex="main:center">
+								<div class="s-2-l-text">
+									<div class="s-2-l-t">姓名:郭嘉乐</div>
+									<div class="s-2-l-t">大学:天工大</div>
+									<div class="s-2-l-t">求职:前端开发</div>
+									<div class="s-2-l-t">现居:天通苑北</div>
+									<div class="s-2-l-t">兴趣:足球</div>
+								</div>
+								<div>
+									<div class="s-2-l-t">电话:15801329463</div>
+									<div class="s-2-l-t">专业:电子(一本)</div>
+									<div class="s-2-l-t">工作:3年</div>
+									<div class="s-2-l-t">企箱:guojiale@txship.cn</div>
+									<div class="s-2-l-t">家乡:黑龙江</div>
+								</div>
+							</div>
+							<div class="focus">
+								<span>专注,向前,才有更多可能</span>
+								<i class="focus-xian"><img src="images/xian-1.png" alt=""></i>
+							</div>
+							<div>
+								<img class="s-2-cir-pic" src="images/cicle-star.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		    <div class="swiper-slide" style="background: #FE0000;">3</div>
+		    <div class="swiper-slide" style="background: #FEf000;">4</div>
+		    <div class="swiper-slide" style="background: #FE0f00;">5</div>
+		  </div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			
+			var mySwiper = new Swiper('.swiper-container', {
+				direction : 'vertical',
+				noSwiping : true,
+                pagination : '.swiper-pagination',
+                paginationType : 'fraction',
+                nextButton:'.swiper-button-next',
+				onInit: function(swiper){
+
+				  $(".swiper-slide").eq(0).addClass("guo-move");
+				},
+				onSlideChangeEnd: function(swiper){
+
+					var index=swiper.activeIndex;
+					$(".swiper-slide").removeClass("guo-move");
+
+					$(".swiper-slide").eq(index).addClass("guo-move");
+
+				},
+
+			})
+		})
+	</script>
+	</body>
+</html>
