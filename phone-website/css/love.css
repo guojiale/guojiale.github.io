@@ -419,9 +419,9 @@ img{display: block; vertical-align: top;}
 }
 .s-2-title-text .s-2-left{
     position: absolute;
-    left: 10%;
+    left: 6%;
     bottom:0px;
-    width: 42%;
+    width: 44%;
     height: 2px;
     background-color: #b00152;
     transform: translateX(-300px) translateY(400px) rotateX(0deg) scale(3) rotateZ(0deg);
@@ -429,9 +429,9 @@ img{display: block; vertical-align: top;}
 }
 .s-2-title-text .s-2-right{
     position: absolute;
-    right: 10%;
+    right: 6%;
     bottom:0px;
-    width: 42%;
+    width: 46%;
     height: 2px;
     background-color: #b00152;
     transform: translateX(300px) translateY(400px) rotateX(0deg) scale(3) rotateZ(0deg);
@@ -444,7 +444,7 @@ img{display: block; vertical-align: top;}
     -webkit-transform: translateX(0px) translateY(0px) rotateX(0deg) scale(1)  rotateZ(1440deg);
 }
 .s-2-basic-title .text{
-    width: 82%;
+    width: 84%;
     font-family: "Microsoft YaHei";
     font-size: 18px;
     margin: 0 auto;
