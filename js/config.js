@@ -71,6 +71,26 @@ app.constant('baseService',{
     }
 });
 /*/--------------------------directive------------------------------/*/
+/*自动生成二维码*/
+app.directive('gPic',function () {
+    return{
+        restrict:'A',
+        template:'<div class="g-erwei-box"><img src="{{yuan}}+{{url}}"><input type="url" ng-model="url" /><button class="btn btn-success" ng-click="download(yuan+url)">点击下载</button></div>',
+        link:function (scope,ele,attrs) {
+            scope.yuan='http://qr.liantu.com/api.php?&w=200&text=';
+            scope.url='https://guojiale.github.io/';
+            scope.download=function (src) {
+                var $a = document.createElement('a');
+                $a.setAttribute("href", src);
+                $a.setAttribute("download", "");
+
+                var evObj = document.createEvent('MouseEvents');
+                evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
+                $a.dispatchEvent(evObj);
+            }
+        }
+    }
+});
 app.directive('myVideo',function (baseService) {
     return{
         restrict:'A',
