@@ -10,9 +10,9 @@ app.run(function ($rootScope,$state) {
     });
 });
 /*/--------------------------controller------------------------------/*/
-app.controller('cube',function ($scope) {
+app.controller('cube',['$scope',function ($scope) {
     $scope.cubeNavId=0
-});
+}]);
 /*/--------------------------router------------------------------/*/
 app.config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider.state('personal',{
@@ -65,6 +65,11 @@ app.config(function ($stateProvider,$urlRouterProvider) {
  }
  }
  });*/
+app.factory('interface',function ($resource) {
+   return $resource('user/:id',{},{
+       "update":"put"
+   })
+});
 app.constant('baseService',{
     "doubleNumber":function (num) {
         return num<10 ?'0'+num : num;
@@ -78,7 +83,7 @@ app.directive('gPic',function () {
         template:'<div class="g-erwei-box"><img src="{{yuan}}+{{url}}"><input type="url" ng-model="url" /><button class="btn btn-success" ng-click="download(yuan+url)">点击下载</button></div>',
         link:function (scope,ele,attrs) {
             scope.yuan='http://qr.liantu.com/api.php?&w=200&text=';
-            scope.url='https://guojiale.github.io/';
+            scope.url='https://guojiale.github.io/ ';
             scope.download=function (src) {
                 var $a = document.createElement('a');
                 $a.setAttribute("href", src);
