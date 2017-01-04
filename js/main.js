@@ -28,6 +28,9 @@ app.controller('headerCtrl',['$scope','$interval','$state',function ($scope,$int
             case 'blog':
                 vm.indexid=4;
                 break;
+            case 'react':
+                vm.indexid=5;
+                break;
         }
     };
     vm.timer=new Date();

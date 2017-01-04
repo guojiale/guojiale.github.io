@@ -13,6 +13,8 @@ app.run(function ($rootScope,$state) {
 app.controller('cube',['$scope',function ($scope) {
     $scope.cubeNavId=0
 }]);
+app.controller('react',['$scope',function ($scope) {
+}]);
 /*/--------------------------router------------------------------/*/
 app.config(function ($stateProvider,$urlRouterProvider) {
     $stateProvider.state('personal',{
@@ -28,6 +30,10 @@ app.config(function ($stateProvider,$urlRouterProvider) {
         onExit:function () {
             
         }
+    }).state('react',{
+        url:'/react',
+        templateUrl:'react-demo/build/index.html',
+       /* controller:'react'*/
     }).state('h5c3',{
         url:'/h5c3',
         templateUrl:'template/h5c3.html',

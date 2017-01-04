@@ -4,11 +4,18 @@
 var HtmlWebpackPlugin=require('html-webpack-plugin');
 var OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin');
 var path=require('path');
+var jqueryPath = path.join(__dirname,"./node_modules/jquery/dist/jquery.js");
 module.exports={
     entry:'./react-demo/app/index.js',
     output:{
         path:'./react-demo/build',
         filename:'bundle.js'
+    },
+    resolve:{
+        extensions:["",".js",".css",".json"],
+        alias:{
+            'jquery': jqueryPath
+        }
     },
     module:{
         loaders:[
@@ -25,8 +32,17 @@ module.exports={
                 loader: 'babel',
                 query: { presets: ["es2015","react"] },
                 exclude:/node_modules/
+            },
+            {
+                test:/\.(jpg|png|gif)$/,
+                loader:"url?limit=8192"
+            },
+            {
+                test: /\.(woff|woff2|ttf|svg|eot)$/,
+                loader: "url?limit=8192"
             }
-        ]
+        ],
+        noParse: [jqueryPath]
     },
     devServer: {
             stats: { colors: true }, //显示颜色
