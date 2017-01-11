@@ -10,4 +10,6 @@ ReactDOM.render(
     <Message ></Message>,
     document.getElementById('app')
 );
-console.log($)
+var pic = require('./js/createImg');
+document.getElementById('img').appendChild(pic());
+

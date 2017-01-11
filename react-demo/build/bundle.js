@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "./react-demo/build/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -70,7 +70,8 @@
 	                                                                                                                   * Created by h on 2017/1/3.
 	                                                                                                                   */
 
-	console.log(_jquery2.default);
+	var pic = __webpack_require__(190);
+	document.getElementById('img').appendChild(pic());
 
 /***/ },
 /* 1 */
@@ -171,31 +172,31 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "f4769f9bdb7466be65088239c12046d1.eot";
+	module.exports = __webpack_require__.p + "images/glyphicons-halflings-regular.f4769f9bdb7466be65088239c12046d1.eot";
 
 /***/ },
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "448c34a56d699c29117adc64c43affeb.woff2";
+	module.exports = __webpack_require__.p + "images/glyphicons-halflings-regular.448c34a56d699c29117adc64c43affeb.woff2";
 
 /***/ },
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "fa2772327f55d8198301fdb8bcfc8158.woff";
+	module.exports = __webpack_require__.p + "images/glyphicons-halflings-regular.fa2772327f55d8198301fdb8bcfc8158.woff";
 
 /***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "e18bbf611f2a2e43afc071aa2f4e1512.ttf";
+	module.exports = __webpack_require__.p + "images/glyphicons-halflings-regular.e18bbf611f2a2e43afc071aa2f4e1512.ttf";
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "89889688147bd7575d6327160d64e760.svg";
+	module.exports = __webpack_require__.p + "images/glyphicons-halflings-regular.89889688147bd7575d6327160d64e760.svg";
 
 /***/ },
 /* 9 */
@@ -31386,6 +31387,30 @@
 
 	module.exports = ReactDOMInvalidARIAHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)))
+
+/***/ },
+/* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/**
+	 * Created by h on 2017/1/4.
+	 */
+
+	function getImg() {
+	    var img = document.createElement("img");
+	    img.src = __webpack_require__(191);
+	    return img;
+	}
+
+	module.exports = getImg;
+
+/***/ },
+/* 191 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "images/car-logo.c8e4ed7394d3fa10ea3c248c5ee30f84.jpg";
 
 /***/ }
 /******/ ]);

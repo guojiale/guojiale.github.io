@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "build-react": "webpack --config webpack.react.js"
+    "build-react": "webpack --config webpack.react.js --progress --colors --profiles",
+    "dev": "webpack-dev-server --progress --colors --profiles"
   },
   "repository": {
     "type": "git",

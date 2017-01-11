@@ -9,7 +9,8 @@ module.exports={
     entry:'./react-demo/app/index.js',
     output:{
         path:'./react-demo/build',
-        filename:'bundle.js'
+        filename:'bundle.js',
+        publicPath:'./react-demo/build/'
     },
     resolve:{
         extensions:["",".js",".css",".json"],
@@ -35,11 +36,11 @@ module.exports={
             },
             {
                 test:/\.(jpg|png|gif)$/,
-                loader:"url?limit=8192"
+                loader:"url?limit=8192&name=images/[name].[hash].[ext]"
             },
             {
                 test: /\.(woff|woff2|ttf|svg|eot)$/,
-                loader: "url?limit=8192"
+                loader: "url?limit=8192&name=images/[name].[hash].[ext]"
             }
         ],
         noParse: [jqueryPath]
